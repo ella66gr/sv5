@@ -42,7 +42,7 @@
 
 <!-- Main container with proper responsive padding -->
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
-
+  
   <!-- Header Section - Full width with proper spacing -->
   <div class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -91,37 +91,45 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Theme Features</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Design Principles Applied</h3>
             <ul class="space-y-2 text-gray-600 dark:text-gray-300">
               <li class="flex items-start">
                 <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Live preview:</strong> See theme changes applied instantly across all components</span>
+                <span><strong>Equal-height cards</strong> for visual harmony and balanced grid layouts</span>
               </li>
               <li class="flex items-start">
                 <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Semantic colors:</strong> Each theme conveys meaning and emotional association</span>
+                <span><strong>Consistent spacing</strong> using systematic gap-6 and gap-8 measurements</span>
               </li>
               <li class="flex items-start">
                 <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Accessibility maintained:</strong> Proper contrast ratios in all themes and modes</span>
+                <span><strong>Responsive breakpoints</strong> ensuring mobile-first progressive enhancement</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3 mt-1">✓</span>
+                <span><strong>Semantic color coding</strong> with meaningful gradients and hover states</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">How to Use</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">What You're Seeing</h3>
             <ul class="space-y-2 text-gray-600 dark:text-gray-300">
               <li class="flex items-start">
-                <span class="text-blue-500 mr-3 mt-1">1.</span>
-                <span>Click any theme color below to apply it</span>
+                <span class="text-blue-500 mr-3 mt-1">▶</span>
+                <span>Components organized in <strong>balanced pairs</strong> and logical groupings</span>
               </li>
               <li class="flex items-start">
-                <span class="text-blue-500 mr-3 mt-1">2.</span>
-                <span>Watch components update with the new color scheme</span>
+                <span class="text-blue-500 mr-3 mt-1">▶</span>
+                <span><strong>Professional grid system</strong> with proper max-width containers</span>
               </li>
               <li class="flex items-start">
-                <span class="text-blue-500 mr-3 mt-1">3.</span>
-                <span>Toggle dark mode to see theme behavior in both modes</span>
+                <span class="text-blue-500 mr-3 mt-1">▶</span>
+                <span>Each section demonstrates <strong>real working components</strong> with interactive states</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3 mt-1">▶</span>
+                <span><strong>Visual hierarchy</strong> using typography, spacing, and subtle gradients</span>
               </li>
             </ul>
           </div>
@@ -129,255 +137,279 @@
       </Card>
     </div>
 
-    <!-- Theme Selection Section -->
-    <div class="mb-16">
-      <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Available Color Themes</h2>
-          <p class="text-gray-600 dark:text-gray-400">Choose from our carefully curated palette of semantic color themes</p>
-        </div>
-
-        <!-- Theme selector grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {#each themes as theme}
-            <button
-              class="flex flex-col items-center p-6 border-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105 {currentTheme === theme.value ? 'border-' + theme.value + '-600 bg-' + theme.value + '-50 dark:bg-' + theme.value + '-900/20' : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'}"
-              on:click={() => applyTheme(theme.value)}
-            >
-              <!-- Theme color circle -->
-              <div class="w-16 h-16 {theme.class} rounded-full mb-4 shadow-lg"></div>
-              <!-- Theme name -->
-              <span class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{theme.name}</span>
-              <!-- Theme description -->
-              <span class="text-sm text-gray-600 dark:text-gray-400 text-center">{theme.description}</span>
-
-              {#if currentTheme === theme.value}
-                <div class="mt-3">
-                  <Badge color={theme.value} class="text-xs">Active Theme</Badge>
-                </div>
-              {/if}
-            </button>
-          {/each}
-        </div>
-      </Card>
-    </div>
-
-    <!-- Live Demo Section - Balanced paired layout -->
+    <!-- Buttons & Badges Section - Equal height paired cards -->
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-16">
-
-      <!-- Interactive Components Card -->
+      
       <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <div class="mb-6">
           <div class="flex items-center mb-4">
             <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-lg">🎛️</span>
+              <span class="text-lg">🔘</span>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Interactive Elements</h3>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Buttons</h2>
           </div>
-          <p class="text-gray-600 dark:text-gray-400">Components using the current <Badge color={currentTheme} class="mx-1">{currentTheme}</Badge> theme with hover effects</p>
+          <p class="text-gray-600 dark:text-gray-400">Interactive button components with multiple variants and hover effects</p>
         </div>
 
         <div class="space-y-6">
-          <!-- Themed Buttons Section -->
           <div>
-            <Label class="text-sm font-medium text-gray-900 dark:text-white mb-3 block">
-              Themed Buttons
-            </Label>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Primary Colors</h3>
             <div class="flex flex-wrap gap-3">
-              <Button color={currentTheme}>Primary</Button>
-              <Button color={currentTheme} outline>Outline</Button>
-              <Button color="alternative">Alternative</Button>
-              <Button color="dark">Dark</Button>
+              <Button>Default</Button>
+              <Button color="blue">Blue</Button>
+              <Button color="green">Green</Button>
+              <Button color="red">Red</Button>
+              <Button color="yellow">Yellow</Button>
+              <Button color="purple">Purple</Button>
             </div>
           </div>
 
-          <!-- Themed Badges Section -->
           <div>
-            <Label class="text-sm font-medium text-gray-900 dark:text-white mb-3 block">
-              Themed Badges
-            </Label>
-            <div class="flex flex-wrap gap-2">
-              <Badge color={currentTheme}>Active</Badge>
-              <Badge color={currentTheme} large>Featured</Badge>
-              <Badge color="alternative">Default</Badge>
-              <Badge color="green">Success</Badge>
-              <Badge color="red">Error</Badge>
-            </div>
-          </div>
-
-          <!-- Form Elements Section -->
-          <div>
-            <Label class="text-sm font-medium text-gray-900 dark:text-white mb-3 block">
-              Form Elements
-            </Label>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Variants & Sizes</h3>
             <div class="space-y-3">
-              <Input placeholder="Input with themed focus state" class="w-full" />
-              <div class="flex gap-2">
-                <Button color={currentTheme} size="sm">Submit</Button>
-                <Button color="alternative" size="sm">Cancel</Button>
+              <div class="flex flex-wrap gap-3">
+                <Button color="alternative">Alternative</Button>
+                <Button color="dark">Dark</Button>
+                <Button outline>Outline</Button>
+                <Button color="blue" outline>Blue Outline</Button>
+              </div>
+              <div class="flex flex-wrap items-center gap-3">
+                <Button size="xs">Extra Small</Button>
+                <Button size="sm">Small</Button>
+                <Button>Default</Button>
+                <Button size="lg">Large</Button>
               </div>
             </div>
           </div>
         </div>
       </Card>
 
-      <!-- Status System Card -->
       <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <div class="mb-6">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-lg">📊</span>
+            <div class="w-10 h-10 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-3">
+              <span class="text-lg">🏷️</span>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Status System</h3>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Badges</h2>
           </div>
-          <p class="text-gray-600 dark:text-gray-400">Semantic colors for consistent user feedback across all themes</p>
+          <p class="text-gray-600 dark:text-gray-400">Status indicators and category labels with semantic color coding</p>
         </div>
 
-        <!-- Alert components demonstrating proper dark mode text colors -->
-        <div class="space-y-4">
-          <!-- Information Alert -->
-          <Alert color="blue">
-            <svg slot="icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-            </svg>
-            <span class="font-medium">Information:</span> Here's some helpful information for you.
-          </Alert>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Standard Badges</h3>
+            <div class="flex flex-wrap gap-2">
+              <Badge>Default</Badge>
+              <Badge color="blue">Information</Badge>
+              <Badge color="green">Success</Badge>
+              <Badge color="red">Error</Badge>
+              <Badge color="yellow">Warning</Badge>
+              <Badge color="purple">Feature</Badge>
+            </div>
+          </div>
 
-          <!-- Success Alert -->
-          <Alert color="green">
-            <svg slot="icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-            </svg>
-            <span class="font-medium">Success:</span> Your theme has been applied successfully.
-          </Alert>
-
-          <!-- Warning Alert -->
-          <Alert color="yellow">
-            <svg slot="icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z"/>
-            </svg>
-            <span class="font-medium">Warning:</span> Consider contrast when choosing themes.
-          </Alert>
-
-          <!-- Error Alert -->
-          <Alert color="red">
-            <svg slot="icon" class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z"/>
-            </svg>
-            <span class="font-medium">Error:</span> Theme application failed. Please try again.
-          </Alert>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Large Status Badges</h3>
+            <div class="space-y-3">
+              <div class="flex flex-wrap gap-3">
+                <Badge color="green" large>✓ Completed</Badge>
+                <Badge color="blue" large>ℹ Processing</Badge>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <Badge color="yellow" large>⚠ Pending</Badge>
+                <Badge color="red" large>✗ Failed</Badge>
+              </div>
+            </div>
+          </div>
         </div>
       </Card>
     </div>
 
-    <!-- Typography & Dark Mode Section -->
+    <!-- Alerts & Form Inputs Section - Equal height paired cards -->
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-16">
+      
+      <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+        <div class="mb-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900 rounded-lg flex items-center justify-center mr-3">
+              <span class="text-lg">⚠️</span>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Alerts</h2>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400">User feedback messages with semantic styling and proper contrast</p>
+        </div>
 
-      <!-- Typography Showcase -->
+        <div class="space-y-4">
+          <Alert color="blue">
+            <span class="font-medium">Information:</span> Here's some helpful information about your request.
+          </Alert>
+
+          <Alert color="green">
+            {#snippet icon()}<CheckCircleSolid class="h-5 w-5" />{/snippet}
+            <span class="font-medium">Success:</span> Your changes have been saved successfully.
+          </Alert>
+
+          <Alert color="yellow">
+            <span class="font-medium">Warning:</span> Please review your information before proceeding.
+          </Alert>
+
+          <Alert color="red">
+            {#snippet icon()}<CloseCircleSolid class="h-5 w-5" />{/snippet}
+            <span class="font-medium">Error:</span> Something went wrong. Please try again.
+          </Alert>
+        </div>
+      </Card>
+
       <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <div class="mb-6">
           <div class="flex items-center mb-4">
             <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-lg">✍️</span>
+              <span class="text-lg">📝</span>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Typography System</h3>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Form Inputs</h2>
           </div>
-          <p class="text-gray-600 dark:text-gray-400">Consistent text hierarchy that works across all themes and modes</p>
+          <p class="text-gray-600 dark:text-gray-400">Essential form controls with proper validation styling and accessibility</p>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <Label for="demo-text" class="mb-2">Text Input</Label>
+            <Input id="demo-text" placeholder="Enter your text here" class="w-full" />
+          </div>
+
+          <div>
+            <Label for="demo-email" class="mb-2">Email Address</Label>
+            <Input id="demo-email" type="email" placeholder="your.email@example.com" class="w-full" />
+          </div>
+
+          <div>
+            <Label for="demo-select" class="mb-2">Select Country</Label>
+            <Select id="demo-select" bind:value={selectValue} items={selectOptions} placeholder="Choose a country" class="w-full" />
+          </div>
+
+          <div>
+            <Label for="demo-textarea" class="mb-2">Message</Label>
+            <Textarea id="demo-textarea" placeholder="Write your message here..." rows="3" class="w-full" />
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!-- Interactive Controls & Loading States Section - Equal height paired cards -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-16">
+      
+      <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
+        <div class="mb-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mr-3">
+              <span class="text-lg">🎛️</span>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Interactive Controls</h2>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400">User input controls with proper state management and accessibility</p>
         </div>
 
         <div class="space-y-6">
-          <!-- Headings Demo -->
           <div>
-            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Heading Hierarchy</h4>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Checkboxes</h3>
             <div class="space-y-2">
-              <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Heading 1</h1>
-              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Heading 2</h2>
-              <h3 class="text-xl font-medium text-gray-900 dark:text-white">Heading 3</h3>
-              <h4 class="text-lg text-gray-900 dark:text-white">Heading 4</h4>
+              <Checkbox bind:checked={checkboxValue}>I agree to the terms and conditions</Checkbox>
+              <Checkbox>Send me marketing emails</Checkbox>
+              <Checkbox checked disabled>This option is disabled</Checkbox>
             </div>
           </div>
 
-          <!-- Body Text Demo -->
           <div>
-            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Body Text Styles</h4>
-            <div class="space-y-3">
-              <p class="text-base text-gray-900 dark:text-white">
-                Primary text with optimal contrast for comfortable reading.
-              </p>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
-                Secondary text for supporting information and captions.
-              </p>
-              <p class="text-xs text-gray-500 dark:text-gray-500">
-                Tertiary text for metadata and fine print.
-              </p>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Radio Buttons</h3>
+            <div class="space-y-2">
+              <Radio name="demo-options" bind:group={radioValue} value="option1">Payment Option 1</Radio>
+              <Radio name="demo-options" bind:group={radioValue} value="option2">Payment Option 2</Radio>
+              <Radio name="demo-options" bind:group={radioValue} value="option3">Payment Option 3</Radio>
             </div>
           </div>
 
-          <!-- Links Demo -->
           <div>
-            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Interactive Text</h4>
-            <p class="text-gray-900 dark:text-white">
-              This text contains a <a href="/themes" class="text-{currentTheme}-600 hover:text-{currentTheme}-700 dark:text-{currentTheme}-400 dark:hover:text-{currentTheme}-300 underline">themed link</a>, 
-              <strong class="font-semibold">bold emphasis</strong>, and 
-              <code class="px-2 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded">inline code</code>.
-            </p>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Toggle Switch</h3>
+            <Toggle bind:checked={toggleValue}>Enable notifications</Toggle>
           </div>
         </div>
       </Card>
 
-      <!-- Dark Mode Showcase -->
       <Card class="p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm">
         <div class="mb-6">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mr-3">
-              <span class="text-lg">🌙</span>
+            <div class="w-10 h-10 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center mr-3">
+              <span class="text-lg">⏳</span>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dark Mode Excellence</h3>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Loading & Media</h2>
           </div>
-          <p class="text-gray-600 dark:text-gray-400">All themes maintain accessibility and visual appeal in both light and dark modes</p>
+          <p class="text-gray-600 dark:text-gray-400">Progress indicators, spinners, and user representation components</p>
         </div>
 
         <div class="space-y-6">
-          <!-- Dark Mode Features -->
           <div>
-            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Dark Mode Features</h4>
-            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Automatic detection:</strong> Respects system preferences</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Persistent choice:</strong> Remembers user selection</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Theme compatibility:</strong> All colors work in both modes</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-500 mr-3 mt-1">✓</span>
-                <span><strong>Reduced eye strain:</strong> Lower contrast for dark environments</span>
-              </li>
-            </ul>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Progress Bars</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-blue-700 dark:text-blue-400">Upload Progress</span>
+                  <span class="text-sm font-medium text-blue-700 dark:text-blue-400">68%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                  <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 68%"></div>
+                </div>
+              </div>
+              
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-green-700 dark:text-green-400">Processing</span>
+                  <span class="text-sm font-medium text-green-700 dark:text-green-400">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                  <div class="bg-green-600 h-2.5 rounded-full transition-all duration-300" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Color Contrast Demo -->
           <div>
-            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Contrast Examples</h4>
-            <div class="space-y-3">
-              <div class="p-3 bg-gray-100 dark:bg-gray-700 rounded">
-                <span class="text-sm text-gray-600 dark:text-gray-300">Surface contrast</span>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Spinners & Avatars</h3>
+            <div class="space-y-4">
+              <div class="flex gap-4 items-center">
+                <div class="text-center">
+                  <Spinner size="4" />
+                  <span class="text-xs text-gray-500 dark:text-gray-400 mt-1 block">Small</span>
+                </div>
+                <div class="text-center">
+                  <Spinner size="6" color="blue" />
+                  <span class="text-xs text-gray-500 dark:text-gray-400 mt-1 block">Medium</span>
+                </div>
+                <div class="text-center">
+                  <Spinner size="8" color="green" />
+                  <span class="text-xs text-gray-500 dark:text-gray-400 mt-1 block">Large</span>
+                </div>
               </div>
-              <div class="p-3 bg-{currentTheme}-100 dark:bg-{currentTheme}-900/30 rounded border border-{currentTheme}-200 dark:border-{currentTheme}-800">
-                <span class="text-sm text-{currentTheme}-700 dark:text-{currentTheme}-300">Themed surface contrast</span>
-              </div>
-              <div class="flex gap-2">
-                <Button color={currentTheme} size="sm">Primary Action</Button>
-                <Button color={currentTheme} outline size="sm">Secondary</Button>
+
+              <div class="flex gap-3 items-center">
+                <Avatar />
+                <Avatar src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" />
+                <Avatar src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" size="lg" />
+                <Button on:click={() => modalOpen = true} size="sm">Open Modal</Button>
               </div>
             </div>
           </div>
         </div>
+
+        <Modal bind:open={modalOpen} title="Component Demo Modal">
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            This modal demonstrates proper focus management and keyboard navigation support for accessibility.
+            It includes proper ARIA labels and can be closed with the Escape key.
+          </p>
+          <div slot="footer" class="flex space-x-2">
+            <Button on:click={() => modalOpen = false}>Confirm</Button>
+            <Button color="alternative" on:click={() => modalOpen = false}>Cancel</Button>
+          </div>
+        </Modal>
       </Card>
     </div>
 
@@ -386,40 +418,40 @@
       <Card class="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200">
         <div class="flex items-center mb-4">
           <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🎨</span>
+            <span class="text-2xl">⚡</span>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dynamic Theming</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Fast Development</h3>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-          Real-time theme switching with semantic color meanings and instant visual feedback across all components.
+          Components that work seamlessly with Svelte 5 and modern development practices for rapid prototyping.
         </p>
-        <Badge color="blue">Interactive</Badge>
-      </Card>
-
-      <Card class="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200">
-        <div class="flex items-center mb-4">
-          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">🌓</span>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dark Mode Ready</h3>
-        </div>
-        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-          Comprehensive dark mode support with proper contrast ratios and automatic system preference detection.
-        </p>
-        <Badge color="purple">Accessibility</Badge>
+        <Badge color="blue">Performance</Badge>
       </Card>
 
       <Card class="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200">
         <div class="flex items-center mb-4">
           <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mr-4">
-            <span class="text-2xl">⚡</span>
+            <span class="text-2xl">🎨</span>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Production Ready</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Modern Styling</h3>
         </div>
         <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-          Enterprise-grade theming system with consistent design tokens and scalable color management.
+          Beautiful components that adapt seamlessly to both light and dark themes with consistent design language.
         </p>
-        <Badge color="green">Enterprise</Badge>
+        <Badge color="green">Design</Badge>
+      </Card>
+
+      <Card class="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
+            <span class="text-2xl">♿</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Accessible</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+          All components follow WCAG guidelines with proper ARIA labels, keyboard navigation, and screen reader support.
+        </p>
+        <Badge color="purple">Inclusive</Badge>
       </Card>
     </div>
 
@@ -427,9 +459,9 @@
     <div class="text-center py-8">
       <div class="max-w-3xl mx-auto">
         <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-          This theming system demonstrates the power of Flowbite Svelte's design token architecture. 
-          All themes maintain WCAG AA accessibility standards and work seamlessly across light and dark modes 
-          for professional application development.
+          All components are fully responsive and work seamlessly with Svelte 5 and Tailwind CSS v4. 
+          This page demonstrates balanced layout principles with equal-height cards and proper visual hierarchy 
+          for professional web applications.
         </p>
       </div>
     </div>
